@@ -38,12 +38,6 @@ void push(stack_t **stack, unsigned int line_number)
 		i++;
 		j++;
 	}
-	if (line[i] != ' ' && line[i] != '\0')
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		free_stack(*stack);
-		exit(EXIT_FAILURE);
-	}
 	value[j] = '\0';
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
